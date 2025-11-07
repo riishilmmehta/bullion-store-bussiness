@@ -1,0 +1,2075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehta's Bullion Store | Premium Gold, Silver & Jewelry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== PROFESSIONAL CSS FOR MEHTA'S BULLION STORE ===== */
+        /* Luxury Gold & Jewelry Theme with Premium Styling */
+
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            /* Color Palette - Luxury Gold Theme */
+            --primary-gold: #D4AF37;
+            --secondary-gold: #FFD700;
+            --dark-gold: #B8860B;
+            --light-gold: #F5E6B3;
+            --rich-black: #0A0A0A;
+            --charcoal: #1A1A1A;
+            --dark-gray: #2D2D2D;
+            --medium-gray: #555555;
+            --light-gray: #E5E5E5;
+            --pure-white: #FFFFFF;
+            --cream: #F8F6F0;
+            
+            /* Gradients */
+            --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #B8860B 100%);
+            --dark-gradient: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #2D2D2D 100%);
+            --light-gradient: linear-gradient(135deg, #F8F6F0 0%, #FFFFFF 50%, #F5F5F5 100%);
+            
+            /* Typography */
+            --font-primary: 'Playfair Display', 'Times New Roman', serif;
+            --font-secondary: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            --font-accent: 'Cormorant Garamond', 'Georgia', serif;
+            
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 2rem;
+            --space-xl: 4rem;
+            --space-xxl: 8rem;
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-round: 50%;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.16);
+            --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.3);
+            --shadow-luxury: 0 10px 50px rgba(0, 0, 0, 0.25);
+            
+            /* Transitions */
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ===== CSS RESET & BASE STYLES ===== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            font-weight: 400;
+            line-height: 1.7;
+            color: var(--medium-gray);
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-primary);
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--rich-black);
+            margin-bottom: var(--space-md);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        p {
+            margin-bottom: var(--space-md);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--medium-gray);
+        }
+
+        .text-gold {
+            color: var(--primary-gold);
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ===== LAYOUT & CONTAINERS ===== */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+
+        .section {
+            padding: var(--space-xxl) 0;
+            position: relative;
+        }
+
+        .section-dark {
+            background: var(--dark-gradient);
+            color: var(--pure-white);
+        }
+
+        .section-light {
+            background: var(--light-gradient);
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            padding: 1rem 2.5rem;
+            font-family: var(--font-secondary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left var(--transition-slow);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--gold-gradient);
+            color: var(--rich-black);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-gold);
+            border: 2px solid var(--primary-gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-gold);
+            color: var(--rich-black);
+            transform: translateY(-2px);
+        }
+
+        .btn-dark {
+            background: var(--rich-black);
+            color: var(--pure-white);
+            border: 2px solid var(--rich-black);
+        }
+
+        .btn-dark:hover {
+            background: var(--primary-gold);
+            color: var(--rich-black);
+            border-color: var(--primary-gold);
+        }
+
+        .btn-lg {
+            padding: 1.25rem 3rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-sm {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.85rem;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            z-index: 1020;
+            transition: all var(--transition-normal);
+        }
+
+        .header.scrolled {
+            background: rgba(10, 10, 10, 0.98);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-family: var(--font-accent);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            letter-spacing: 0.05em;
+        }
+
+        .logo-accent {
+            color: var(--pure-white);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: var(--space-xl);
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            font-family: var(--font-secondary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--pure-white);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: color var(--transition-fast);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold-gradient);
+            transition: width var(--transition-normal);
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-gold);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+        }
+
+        .action-btn {
+            color: var(--pure-white);
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            position: relative;
+        }
+
+        .action-btn:hover {
+            color: var(--primary-gold);
+            transform: translateY(-1px);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--gold-gradient);
+            color: var(--rich-black);
+            font-size: 0.7rem;
+            font-weight: 700;
+            width: 18px;
+            height: 18px;
+            border-radius: var(--radius-round);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--pure-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===== PRICE TICKER ===== */
+        .price-ticker {
+            background: var(--dark-gradient);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 0.75rem 0;
+            overflow: hidden;
+            position: relative;
+            margin-top: 70px;
+        }
+
+        .ticker-container {
+            display: flex;
+            animation: ticker-scroll 40s linear infinite;
+        }
+
+        .ticker-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            white-space: nowrap;
+            padding: 0 var(--space-xl);
+            font-family: var(--font-secondary);
+            font-weight: 600;
+            color: var(--pure-white);
+        }
+
+        .ticker-price {
+            color: var(--primary-gold);
+        }
+
+        .ticker-change.positive {
+            color: #10B981;
+        }
+
+        .ticker-change.negative {
+            color: #EF4444;
+        }
+
+        @keyframes ticker-scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 26, 26, 0.8) 100%), 
+                        url('https://images.unsplash.com/photo-1580137189272-c9379f886969?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gold-gradient);
+            opacity: 0.1;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: var(--pure-white);
+            margin-bottom: var(--space-lg);
+            line-height: 1.1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--light-gold);
+            margin-bottom: var(--space-xl);
+            line-height: 1.6;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--space-lg);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.15; }
+        }
+
+        /* ===== PRODUCTS SECTION ===== */
+        .products-section {
+            background: var(--light-gradient);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-xxl);
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gold-gradient);
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--medium-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .product-filters {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--radius-md);
+            font-family: var(--font-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--medium-gray);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--gold-gradient);
+            border-color: transparent;
+            color: var(--rich-black);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+
+        .product-card {
+            background: var(--pure-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            background: var(--gold-gradient);
+            color: var(--rich-black);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            z-index: 2;
+        }
+
+        .product-image {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 0%, rgba(10, 10, 10, 0.7) 100%);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: var(--space-lg);
+        }
+
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: var(--space-sm);
+            transform: translateY(20px);
+            transition: transform var(--transition-normal);
+        }
+
+        .product-card:hover .product-actions {
+            transform: translateY(0);
+        }
+
+        .product-info {
+            padding: var(--space-lg);
+        }
+
+        .product-category {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-sm);
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--rich-black);
+            margin-bottom: var(--space-sm);
+            line-height: 1.4;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            margin-bottom: var(--space-md);
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: var(--space-md);
+            padding-top: var(--space-md);
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary-gold);
+        }
+
+        /* ===== TOOLS SECTION ===== */
+        .tools-section {
+            background: var(--dark-gradient);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+        }
+
+        .tool-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            text-align: center;
+            transition: all var(--transition-normal);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left var(--transition-slow);
+        }
+
+        .tool-card:hover::before {
+            left: 100%;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .tool-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto var(--space-lg);
+            background: var(--gold-gradient);
+            border-radius: var(--radius-round);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--rich-black);
+        }
+
+        .tool-card h3 {
+            color: var(--pure-white);
+            margin-bottom: var(--space-md);
+        }
+
+        .tool-card p {
+            color: var(--light-gold);
+            margin-bottom: var(--space-lg);
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+        }
+
+        .service-card {
+            background: var(--pure-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gold-gradient);
+            transform: scaleY(0);
+            transition: transform var(--transition-normal);
+        }
+
+        .service-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin-bottom: var(--space-lg);
+        }
+
+        .service-card h3 {
+            margin-bottom: var(--space-md);
+        }
+
+        /* ===== MODALS ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1050;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-lg);
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--pure-white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-luxury);
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .modal-header {
+            background: var(--gold-gradient);
+            padding: var(--space-xl);
+            text-align: center;
+            border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+        }
+
+        .modal-header h2 {
+            color: var(--rich-black);
+            margin-bottom: 0;
+        }
+
+        .modal-body {
+            padding: var(--space-xl);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: var(--space-lg);
+            right: var(--space-lg);
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--rich-black);
+            cursor: pointer;
+            transition: color var(--transition-fast);
+        }
+
+        .modal-close:hover {
+            color: var(--pure-white);
+        }
+
+        /* ===== CART STYLES ===== */
+        .cart-items {
+            margin-bottom: var(--space-lg);
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 80px 1fr auto auto;
+            gap: var(--space-md);
+            align-items: center;
+            padding: var(--space-md);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cart-item-details h4 {
+            margin-bottom: var(--space-xs);
+            font-size: 1.1rem;
+        }
+
+        .cart-item-price {
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .quantity-btn {
+            width: 32px;
+            height: 32px;
+            border: 1px solid var(--light-gray);
+            background: var(--pure-white);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .quantity-btn:hover {
+            border-color: var(--primary-gold);
+            color: var(--primary-gold);
+        }
+
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--radius-sm);
+            padding: 0.5rem;
+        }
+
+        .cart-item-remove {
+            color: #EF4444;
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: color var(--transition-fast);
+        }
+
+        .cart-item-remove:hover {
+            color: #DC2626;
+        }
+
+        .cart-summary {
+            border-top: 2px solid var(--light-gray);
+            padding-top: var(--space-lg);
+        }
+
+        .cart-total-line {
+            display: flex;
+            justify-content: space-between;
+            padding: var(--space-sm) 0;
+        }
+
+        .cart-total-line:last-child {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary-gold);
+            border-top: 1px solid var(--light-gray);
+            margin-top: var(--space-sm);
+        }
+
+        .cart-actions {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        /* ===== AUTH FORMS ===== */
+        .auth-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--light-gray);
+            margin-bottom: var(--space-lg);
+        }
+
+        .auth-tab {
+            flex: 1;
+            padding: var(--space-lg);
+            background: none;
+            border: none;
+            font-family: var(--font-secondary);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--medium-gray);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            border-bottom: 3px solid transparent;
+        }
+
+        .auth-tab.active {
+            color: var(--primary-gold);
+            border-bottom-color: var(--primary-gold);
+        }
+
+        .auth-form {
+            display: none;
+        }
+
+        .auth-form.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: var(--space-sm);
+            font-weight: 600;
+            color: var(--rich-black);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--radius-md);
+            font-family: var(--font-secondary);
+            font-size: 1rem;
+            transition: all var(--transition-fast);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        .form-actions {
+            margin-top: var(--space-xl);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--dark-gradient);
+            color: var(--pure-white);
+            padding: var(--space-xxl) 0 var(--space-xl);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+
+        .footer-brand .logo-text {
+            font-size: 2rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .footer-description {
+            color: var(--light-gold);
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-links h4 {
+            color: var(--pure-white);
+            margin-bottom: var(--space-lg);
+            font-size: 1.2rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--space-sm);
+        }
+
+        .footer-links a {
+            color: var(--light-gold);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: var(--radius-sm);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--pure-white);
+        }
+
+        .newsletter-input::placeholder {
+            color: var(--light-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            padding-top: var(--space-lg);
+            text-align: center;
+            color: var(--light-gold);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+            
+            .hero-title {
+                font-size: 4rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+            
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            
+            .nav-list {
+                gap: var(--space-lg);
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-lg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--rich-black);
+                padding: var(--space-xl);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all var(--transition-normal);
+            }
+            
+            .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-list {
+                flex-direction: column;
+                gap: var(--space-lg);
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cart-item {
+                grid-template-columns: 80px 1fr;
+                gap: var(--space-md);
+            }
+            
+            .cart-item-quantity,
+            .cart-item-remove {
+                grid-column: 1 / -1;
+                justify-self: start;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 var(--space-md);
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-text">MEHTA'S <span class="logo-accent">BULLION STORE</span></div>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#tools" class="nav-link">Tools</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="#" class="action-btn" id="search-btn">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="#" class="action-btn" id="user-btn">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#" class="action-btn" id="wishlist-btn">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="#" class="action-btn" id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Price Ticker -->
+    <div class="price-ticker">
+        <div class="ticker-container">
+            <div class="ticker-item">
+                <span>Gold:</span>
+                <span class="ticker-price">$1,950.20</span>
+                <span class="ticker-change positive">↑ 0.8%</span>
+            </div>
+            <div class="ticker-item">
+                <span>Silver:</span>
+                <span class="ticker-price">$24.35</span>
+                <span class="ticker-change positive">↑ 1.2%</span>
+            </div>
+            <div class="ticker-item">
+                <span>Platinum:</span>
+                <span class="ticker-price">$980.75</span>
+                <span class="ticker-change negative">↓ 0.5%</span>
+            </div>
+            <div class="ticker-item">
+                <span>Palladium:</span>
+                <span class="ticker-price">$1,420.60</span>
+                <span class="ticker-change positive">↑ 2.1%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Precious Metals & Fine Jewelry</h1>
+                <p class="hero-subtitle">Discover our exclusive collection of gold, silver bullion, and exquisite jewelry pieces. Trusted for generations, Mehta's Bullion Store offers quality and authenticity.</p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary btn-lg">Shop Collection</a>
+                    <a href="#about" class="btn btn-secondary btn-lg">Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Exquisite Collection</h2>
+                <p class="section-subtitle">Discover our carefully curated selection of precious metals and fine jewelry</p>
+            </div>
+            
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="gold">Gold</button>
+                <button class="filter-btn" data-filter="silver">Silver</button>
+                <button class="filter-btn" data-filter="jewelry">Jewelry</button>
+                <button class="filter-btn" data-filter="coins">Coins</button>
+            </div>
+            
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section section-dark" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Premium Services</h2>
+                <p class="section-subtitle">Comprehensive solutions for all your precious metal needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Bullion Trading</h3>
+                    <p>Buy and sell gold and silver bullion at competitive market prices with complete transparency and security.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3>Custom Jewelry</h3>
+                    <p>Create unique, personalized jewelry pieces with our expert design and crafting services.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3>Valuation Services</h3>
+                    <p>Get accurate valuations for your precious metals and jewelry from certified professionals.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="section tools-section" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Business Tools</h2>
+                <p class="section-subtitle">Specialized tools to help you make informed investment decisions</p>
+            </div>
+            
+            <div class="tools-grid">
+                <div class="tool-card" id="investment-calculator">
+                    <div class="tool-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Investment Calculator</h3>
+                    <p>Calculate potential returns on your precious metal investments with our advanced calculator</p>
+                </div>
+                
+                <div class="tool-card" id="purity-guide">
+                    <div class="tool-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Metal Purity Guide</h3>
+                    <p>Learn about different metal purity standards and hallmarks used in the industry</p>
+                </div>
+                
+                <div class="tool-card" id="jewelry-care">
+                    <div class="tool-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3>Jewelry Care Guide</h3>
+                    <p>Proper maintenance and care instructions for your precious jewelry collection</p>
+                </div>
+                
+                <div class="tool-card" id="certification-verify">
+                    <div class="tool-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certification Verification</h3>
+                    <p>Verify the authenticity of your precious metal certifications and documentation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-cart">&times;</button>
+            <div class="modal-header">
+                <h2>Your Shopping Cart</h2>
+            </div>
+            <div class="modal-body">
+                <div class="cart-items" id="cart-items">
+                    <!-- Cart items will be loaded here -->
+                </div>
+                <div class="cart-summary">
+                    <div class="cart-total-line">
+                        <span>Subtotal:</span>
+                        <span id="cart-subtotal">$0.00</span>
+                    </div>
+                    <div class="cart-total-line">
+                        <span>Shipping:</span>
+                        <span>$25.00</span>
+                    </div>
+                    <div class="cart-total-line">
+                        <span>Total:</span>
+                        <span id="cart-total">$25.00</span>
+                    </div>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn btn-secondary" id="continue-shopping">Continue Shopping</button>
+                    <button class="btn btn-primary" id="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-login">&times;</button>
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+            </div>
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Login</button>
+                    <button class="auth-tab" data-tab="register">Register</button>
+                </div>
+                
+                <form class="auth-form active" id="login-form">
+                    <div class="form-group">
+                        <label for="login-email" class="form-label">Email Address</label>
+                        <input type="email" id="login-email" class="form-control" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password" class="form-label">Password</label>
+                        <input type="password" id="login-password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Sign In</button>
+                    </div>
+                </form>
+                
+                <form class="auth-form" id="register-form">
+                    <div class="form-group">
+                        <label for="register-name" class="form-label">Full Name</label>
+                        <input type="text" id="register-name" class="form-control" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email" class="form-label">Email Address</label>
+                        <input type="email" id="register-email" class="form-control" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password" class="form-label">Password</label>
+                        <input type="password" id="register-password" class="form-control" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm" class="form-label">Confirm Password</label>
+                        <input type="password" id="register-confirm" class="form-control" placeholder="Confirm your password" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Create Account</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">MEHTA'S <span class="logo-accent">BULLION STORE</span></div>
+                    <p class="footer-description">Your trusted partner for precious metals and fine jewelry since 1990. Quality, authenticity, and exceptional service guaranteed.</p>
+                    <div class="social-links">
+                        <a href="#" class="action-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="action-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="action-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="action-btn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#products">Gold Bullion</a></li>
+                        <li><a href="#products">Silver Bullion</a></li>
+                        <li><a href="#products">Gold Coins</a></li>
+                        <li><a href="#products">Silver Coins</a></li>
+                        <li><a href="#products">Gold Jewelry</a></li>
+                        <li><a href="#products">Diamond Jewelry</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for the latest updates on precious metal prices and new jewelry collections.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Mehta's Bullion Store. All Rights Reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Product Data
+        const products = [
+            {
+                id: 1,
+                name: "24K Gold Bar (100g)",
+                category: "gold",
+                price: 6250.00,
+                image: "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80",
+                badge: "Bestseller",
+                description: "Pure 24K gold bar with certification. Ideal for investment and collection.",
+                rating: 4.9
+            },
+            {
+                id: 2,
+                name: "Pure Silver Bar (1kg)",
+                category: "silver",
+                price: 850.00,
+                image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1450&q=80",
+                badge: "New",
+                description: "High purity silver bar with assay certification. Perfect for silver investors.",
+                rating: 4.8
+            },
+            {
+                id: 3,
+                name: "22K Gold Necklace",
+                category: "jewelry",
+                price: 2450.00,
+                image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                badge: "Popular",
+                description: "Elegant 22K gold necklace with intricate design. Hallmarked for purity.",
+                rating: 4.7
+            },
+            {
+                id: 4,
+                name: "American Gold Eagle Coin",
+                category: "coins",
+                price: 2100.00,
+                image: "https://images.unsplash.com/photo-1606293459035-30d8e8ad5d5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                badge: "Limited",
+                description: "Official US Mint Gold Eagle coin. Highly sought after by collectors.",
+                rating: 4.9
+            },
+            {
+                id: 5,
+                name: "Gold Sovereign Coin",
+                category: "coins",
+                price: 485.00,
+                image: "https://images.unsplash.com/photo-1568194351351-5d16283fe6c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                badge: "Classic",
+                description: "British Gold Sovereign coin with St. George and the Dragon design.",
+                rating: 4.6
+            },
+            {
+                id: 6,
+                name: "Diamond Engagement Ring",
+                category: "jewelry",
+                price: 3500.00,
+                image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                badge: "Luxury",
+                description: "Exquisite diamond engagement ring in 18K white gold setting.",
+                rating: 5.0
+            }
+        ];
+
+        // Cart Data
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        // DOM Elements
+        const productGrid = document.getElementById('product-grid');
+        const cartModal = document.getElementById('cart-modal');
+        const loginModal = document.getElementById('login-modal');
+        const cartItems = document.getElementById('cart-items');
+        const cartSubtotal = document.getElementById('cart-subtotal');
+        const cartTotal = document.getElementById('cart-total');
+        const cartCount = document.querySelector('.cart-count');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const nav = document.getElementById('nav');
+        const searchBtn = document.getElementById('search-btn');
+        const userBtn = document.getElementById('user-btn');
+        const wishlistBtn = document.getElementById('wishlist-btn');
+        const cartBtn = document.getElementById('cart-btn');
+        const closeCart = document.getElementById('close-cart');
+        const closeLogin = document.getElementById('close-login');
+        const continueShopping = document.getElementById('continue-shopping');
+        const checkoutBtn = document.getElementById('checkout-btn');
+        const authTabs = document.querySelectorAll('.auth-tab');
+        const authForms = document.querySelectorAll('.auth-form');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        const toolCards = document.querySelectorAll('.tool-card');
+
+        // Initialize the website
+        function init() {
+            renderProducts();
+            setupEventListeners();
+            updateCartCount();
+            
+            // Add scroll effect to header
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('.header');
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Render products to the page
+        function renderProducts(filter = 'all') {
+            productGrid.innerHTML = '';
+            
+            const filteredProducts = filter === 'all' 
+                ? products 
+                : products.filter(product => product.category === filter);
+            
+            filteredProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.setAttribute('data-category', product.category);
+                productCard.innerHTML = `
+                    ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-sm add-to-cart" data-id="${product.id}">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-secondary btn-sm view-details" data-id="${product.id}">
+                                    <i class="fas fa-eye"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category.charAt(0).toUpperCase() + product.category.slice(1)}</div>
+                        <h3 class="product-title">${product.name}</h3>
+                        <div class="product-price">$${product.price.toFixed(2)}</div>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>${product.rating}</span>
+                            </div>
+                            <button class="btn btn-sm add-to-wishlist" data-id="${product.id}">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                productGrid.appendChild(productCard);
+            });
+            
+            // Add event listeners to the new buttons
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productId = parseInt(e.target.closest('.add-to-cart').getAttribute('data-id'));
+                    addToCart(productId);
+                });
+            });
+            
+            document.querySelectorAll('.view-details').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productId = parseInt(e.target.closest('.view-details').getAttribute('data-id'));
+                    viewProductDetails(productId);
+                });
+            });
+            
+            document.querySelectorAll('.add-to-wishlist').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productId = parseInt(e.target.closest('.add-to-wishlist').getAttribute('data-id'));
+                    addToWishlist(productId);
+                });
+            });
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Mobile menu toggle
+            mobileMenuBtn.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+
+            // Filter buttons
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    const filter = button.getAttribute('data-filter');
+                    renderProducts(filter);
+                });
+            });
+
+            // Search button
+            searchBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('Search functionality would be implemented here');
+            });
+
+            // User button
+            userBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                loginModal.classList.add('active');
+            });
+
+            // Cart button
+            cartBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                renderCart();
+                cartModal.classList.add('active');
+            });
+
+            // Wishlist button
+            wishlistBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('Wishlist feature coming soon!');
+            });
+
+            // Close modals
+            closeCart.addEventListener('click', () => {
+                cartModal.classList.remove('active');
+            });
+
+            closeLogin.addEventListener('click', () => {
+                loginModal.classList.remove('active');
+            });
+
+            continueShopping.addEventListener('click', () => {
+                cartModal.classList.remove('active');
+            });
+
+            // Checkout button
+            checkoutBtn.addEventListener('click', () => {
+                if (cart.length === 0) {
+                    alert('Your cart is empty!');
+                    return;
+                }
+                alert('Proceeding to checkout! This would integrate with a payment gateway in a real implementation.');
+            });
+
+            // Auth tabs
+            authTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabName = tab.getAttribute('data-tab');
+                    
+                    authTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    
+                    authForms.forEach(form => {
+                        form.classList.remove('active');
+                        if (form.id === `${tabName}-form`) {
+                            form.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Login form
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = document.getElementById('login-email').value;
+                const password = document.getElementById('login-password').value;
+                
+                if (email && password) {
+                    alert('Login successful!');
+                    loginModal.classList.remove('active');
+                    loginForm.reset();
+                } else {
+                    alert('Please fill in all fields');
+                }
+            });
+
+            // Register form
+            registerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('register-name').value;
+                const email = document.getElementById('register-email').value;
+                const password = document.getElementById('register-password').value;
+                const confirm = document.getElementById('register-confirm').value;
+                
+                if (name && email && password && confirm) {
+                    if (password !== confirm) {
+                        alert('Passwords do not match!');
+                        return;
+                    }
+                    alert('Registration successful!');
+                    loginModal.classList.remove('active');
+                    registerForm.reset();
+                } else {
+                    alert('Please fill in all fields');
+                }
+            });
+
+            // Tool cards
+            toolCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const toolId = card.id;
+                    let message = '';
+                    
+                    switch(toolId) {
+                        case 'investment-calculator':
+                            message = 'Investment Calculator: Calculate potential returns based on current metal prices and market trends.';
+                            break;
+                        case 'purity-guide':
+                            message = 'Metal Purity Guide: Information about karat values, hallmarks, and purity standards.';
+                            break;
+                        case 'jewelry-care':
+                            message = 'Jewelry Care Guide: Tips on cleaning, storing, and maintaining your precious jewelry.';
+                            break;
+                        case 'certification-verify':
+                            message = 'Certification Verification: Enter certification numbers to verify authenticity.';
+                            break;
+                    }
+                    
+                    alert(message);
+                });
+            });
+
+            // Close modals when clicking outside
+            window.addEventListener('click', (e) => {
+                if (e.target === cartModal) {
+                    cartModal.classList.remove('active');
+                }
+                if (e.target === loginModal) {
+                    loginModal.classList.remove('active');
+                }
+            });
+        }
+
+        // Add product to cart
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const existingItem = cart.find(item => item.id === productId);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    quantity: 1
+                });
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            showNotification(`${product.name} added to cart!`);
+        }
+
+        // Remove product from cart
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+            updateCartCount();
+        }
+
+        // Update cart quantity
+        function updateCartQuantity(productId, quantity) {
+            const item = cart.find(item => item.id === productId);
+            if (item) {
+                item.quantity = quantity;
+                if (item.quantity <= 0) {
+                    removeFromCart(productId);
+                } else {
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    renderCart();
+                    updateCartCount();
+                }
+            }
+        }
+
+        // Render cart items
+        function renderCart() {
+            cartItems.innerHTML = '';
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p style="text-align: center; padding: 2rem;">Your cart is empty</p>';
+                cartSubtotal.textContent = '$0.00';
+                cartTotal.textContent = '$25.00';
+                return;
+            }
+            
+            let subtotal = 0;
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+                
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <div class="cart-item-image">
+                        <img src="${item.image}" alt="${item.name}">
+                    </div>
+                    <div class="cart-item-details">
+                        <h4>${item.name}</h4>
+                        <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <button class="quantity-btn decrease" data-id="${item.id}">-</button>
+                        <input type="number" class="quantity-input" value="${item.quantity}" min="1" data-id="${item.id}">
+                        <button class="quantity-btn increase" data-id="${item.id}">+</button>
+                    </div>
+                    <button class="cart-item-remove" data-id="${item.id}">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                `;
+                cartItems.appendChild(cartItem);
+            });
+            
+            cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+            cartTotal.textContent = `$${(subtotal + 25).toFixed(2)}`;
+            
+            // Add event listeners to cart items
+            document.querySelectorAll('.decrease').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productId = parseInt(e.target.getAttribute('data-id'));
+                    const item = cart.find(item => item.id === productId);
+                    if (item) {
+                        updateCartQuantity(productId, item.quantity - 1);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.increase').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productId = parseInt(e.target.getAttribute('data-id'));
+                    const item = cart.find(item => item.id === productId);
+                    if (item) {
+                        updateCartQuantity(productId, item.quantity + 1);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.quantity-input').forEach(input => {
+                input.addEventListener('change', (e) => {
+                    const productId = parseInt(e.target.getAttribute('data-id'));
+                    const quantity = parseInt(e.target.value);
+                    if (quantity > 0) {
+                        updateCartQuantity(productId, quantity);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.cart-item-remove').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productId = parseInt(e.target.closest('.cart-item-remove').getAttribute('data-id'));
+                    removeFromCart(productId);
+                });
+            });
+        }
+
+        // Update cart count in header
+        function updateCartCount() {
+            const count = cart.reduce((total, item) => total + item.quantity, 0);
+            cartCount.textContent = count;
+        }
+
+        // Add to wishlist
+        function addToWishlist(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!wishlist.find(item => item.id === productId)) {
+                wishlist.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image
+                });
+                localStorage.setItem('wishlist', JSON.stringify(wishlist));
+                showNotification(`${product.name} added to wishlist!`);
+            } else {
+                showNotification(`${product.name} is already in your wishlist!`);
+            }
+        }
+
+        // View product details
+        function viewProductDetails(productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                alert(`Product Details:\n\n${product.name}\n\nPrice: $${product.price.toFixed(2)}\n\nDescription: ${product.description}\n\nCategory: ${product.category.charAt(0).toUpperCase() + product.category.slice(1)}\n\nRating: ${product.rating}/5.0`);
+            }
+        }
+
+        // Show notification
+        function showNotification(message) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.style.position = 'fixed';
+            notification.style.top = '20px';
+            notification.style.right = '20px';
+            notification.style.background = 'var(--gold-gradient)';
+            notification.style.color = 'var(--rich-black)';
+            notification.style.padding = '15px 20px';
+            notification.style.borderRadius = 'var(--radius-md)';
+            notification.style.boxShadow = 'var(--shadow-lg)';
+            notification.style.zIndex = '1060';
+            notification.style.fontWeight = '600';
+            notification.style.fontSize = '0.9rem';
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                if (document.body.contains(notification)) {
+                    document.body.removeChild(notification);
+                }
+            }, 3000);
+        }
+
+        // Initialize the website when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
